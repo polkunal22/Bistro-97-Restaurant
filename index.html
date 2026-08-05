@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bistro 97 | Restaurant</title>
+    <meta
+      name="description"
+      content="A modern restaurant website with a responsive layout, elegant menu, and reservation experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero-section" id="home">
+      <nav class="navbar">
+        <a class="brand" href="#home">Bistro 97</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#reserve">Reserve</a>
+        </div>
+        <a class="nav-cta" href="#reserve">Book a Table</a>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Fine dining • seasonal ingredients</p>
+          <h1>Fresh flavors, warm hospitality.</h1>
+          <p class="hero-text">
+            Discover a modern dining experience where chef-crafted dishes meet a cozy,
+            welcoming atmosphere.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Explore Menu</a>
+            <a class="btn btn-secondary" href="#reserve">Reserve Now</a>
+          </div>
+          <div class="highlights">
+            <div>
+              <strong>4.9/5</strong>
+              <span>Guest rating</span>
+            </div>
+            <div>
+              <strong>Open daily</strong>
+              <span>11am - 11pm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+            alt="A beautifully styled restaurant dining table"
+          />
+          <div class="hero-card-overlay">
+            <p>Tonight’s Special</p>
+            <h3>Truffle Mushroom Risotto</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">Our Story</p>
+          <h2>Crafted with care and served with passion.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Locally sourced</h3>
+            <p>
+              We partner with neighborhood farms to bring the freshest ingredients to every plate.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Modern atmosphere</h3>
+            <p>
+              A blend of contemporary design and relaxed comfort makes every visit memorable.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Signature service</h3>
+            <p>
+              From greeting to dessert, our team ensures each dining experience feels personal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Menu</p>
+          <h2>Signature dishes that bring comfort and elegance together.</h2>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+              alt="A plated pasta dish"
+            />
+            <div class="menu-card-body">
+              <h3>Wild Mushroom Pasta</h3>
+              <p>House-made pasta, roasted garlic cream, and toasted herbs.</p>
+              <span>₹1500</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80"
+              alt="A grilled steak dinner"
+            />
+            <div class="menu-card-body">
+              <h3>Chargrilled Steak</h3>
+              <p>Served with rosemary potatoes and a peppercorn glaze.</p>
+              <span>₹2600</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+              alt="A fresh dessert plated on a table"
+            />
+            <div class="menu-card-body">
+              <h3>Vanilla Bean Tart</h3>
+              <p>Buttery pastry with seasonal fruit and whipped cream.</p>
+              <span>₹1200</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+              alt="A colorful salad plate"
+            />
+            <div class="menu-card-body">
+              <h3>Garden Harvest Salad</h3>
+              <p>Roasted vegetables, burrata, and citrus vinaigrette.</p>
+              <span>₹1100</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+              alt="A gourmet burger"
+            />
+            <div class="menu-card-body">
+              <h3>Smoked BBQ Burger</h3>
+              <p>Slow-cooked beef, caramelized onions, and brioche bun.</p>
+              <span>₹1700</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80"
+              alt="A plated fish dish"
+            />
+            <div class="menu-card-body">
+              <h3>Citrus Herb Salmon</h3>
+              <p>Pan-seared salmon with saffron rice and roasted greens.</p>
+              <span>₹2200</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+              alt="A bowl of ramen"
+            />
+            <div class="menu-card-body">
+              <h3>Spicy Ramen Bowl</h3>
+              <p>Rich broth, soft noodles, and slow-cooked aromatics.</p>
+              <span>₹1800</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&q=80"
+              alt="A plated brunch dish"
+            />
+            <div class="menu-card-body">
+              <h3>Sunrise Brunch Plate</h3>
+              <p>Eggs, toasted sourdough, greens, and house jam.</p>
+              <span>₹1400</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reserve-section" id="reserve">
+        <div class="reserve-copy">
+          <p class="eyebrow">Reserve</p>
+          <h2>Book your table for an unforgettable evening.</h2>
+          <p>
+            Whether it is a date night, celebration, or business dinner, our team will make sure
+            every detail is taken care of.
+          </p>
+        </div>
+
+        <form class="reserve-form">
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="your@email.com" />
+          </label>
+          <label>
+            <span>Date</span>
+            <input type="date" />
+          </label>
+          <label>
+            <span>Guests</span>
+            <input type="number" min="1" max="10" value="2" />
+          </label>
+          <button type="submit">Request Reservation</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Bistro 97. Crafted for unforgettable evenings.</p>
+    </footer>
+  </body>
+</html>
