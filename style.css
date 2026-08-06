@@ -14,11 +14,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  min-height: 100vh;
   font-family: 'Inter', sans-serif;
   color: var(--text);
-  background: linear-gradient(135deg, #fffaf5 0%, #fdf2e8 100%);
-  line-height: 1.6;
+  background: radial-gradient(circle at top, rgba(255, 250, 245, 0.92), transparent 40%),
+    linear-gradient(135deg, #fffaf5 0%, #f7f0e8 100%);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -32,59 +39,78 @@ a {
 }
 
 .hero-section {
-  padding: 1.25rem 5vw 4rem;
-  background: linear-gradient(135deg, rgba(184, 107, 61, 0.95), rgba(76, 46, 25, 0.95));
+  position: relative;
+  padding: 2.5rem 5vw 4rem;
+  background: linear-gradient(135deg, rgba(184, 107, 61, 0.96), rgba(62, 39, 25, 0.96));
   color: #fff;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 30%);
+  pointer-events: none;
 }
 
 .navbar {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto 3rem;
   padding: 1rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
 }
 
 .brand {
   font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
 
 .nav-links a {
-  transition: opacity 0.2s ease;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-cta:hover {
-  opacity: 0.8;
+  opacity: 0.92;
 }
 
 .nav-cta {
-  padding: 0.7rem 1rem;
+  padding: 0.85rem 1.3rem;
   border-radius: 999px;
   background: #fff;
   color: var(--accent-dark);
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy {
@@ -103,27 +129,32 @@ a {
 
 .hero-copy h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.3rem, 4vw, 3.8rem);
-  line-height: 1.1;
+  font-size: clamp(2.8rem, 4vw, 5rem);
+  line-height: 1.04;
   margin-bottom: 1rem;
 }
 
 .hero-text {
-  max-width: 580px;
+  max-width: 570px;
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 1.5rem;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.hero-actions a {
+  min-width: 150px;
+  text-align: center;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.9rem 1.2rem;
+  padding: 0.95rem 1.4rem;
   border-radius: 999px;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -131,7 +162,7 @@ a {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
 }
 
 .btn-primary {
@@ -151,10 +182,10 @@ a {
 }
 
 .highlights div {
-  padding: 0.8rem 1rem;
+  padding: 0.9rem 1rem;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.12);
-  min-width: 140px;
+  background: rgba(255, 255, 255, 0.14);
+  min-width: 160px;
 }
 
 .highlights strong {
@@ -169,34 +200,34 @@ a {
 
 .hero-card {
   position: relative;
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30px 85px rgba(0, 0, 0, 0.24);
   animation: float 5s ease-in-out infinite;
 }
 
 .hero-card img {
-  height: 460px;
+  min-height: 420px;
   object-fit: cover;
 }
 
 .hero-card-overlay {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 1.2rem 1.25rem 1.35rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 1.6rem 1.5rem 1.75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
 }
 
 .hero-card-overlay p {
   font-size: 0.85rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #fce8d7;
 }
 
 .hero-card-overlay h3 {
-  font-size: 1.25rem;
-  margin-top: 0.25rem;
+  font-size: 1.45rem;
+  margin-top: 0.35rem;
 }
 
 .about-section,
@@ -209,73 +240,102 @@ a {
 
 .section-heading {
   text-align: center;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 2.2rem;
+}
+
+.section-heading p {
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 62px;
+  height: 3px;
+  margin: 1.4rem auto 0;
+  background: var(--accent);
+  border-radius: 999px;
 }
 
 .section-heading h2,
 .reserve-copy h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   margin-bottom: 0.8rem;
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.3rem;
 }
 
 .about-card,
 .menu-card,
 .reserve-form {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: 0 14px 35px rgba(53, 36, 24, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(53, 36, 24, 0.08);
 }
 
 .about-card {
-  padding: 1.5rem;
+  padding: 1.8rem;
+  min-height: 190px;
 }
 
 .about-card h3 {
-  margin-bottom: 0.6rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.about-card p,
+.menu-card-body p,
+.reserve-copy p {
+  color: var(--muted);
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
 }
 
 .menu-card {
+  border-radius: 24px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 38px rgba(53, 36, 24, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 45px rgba(53, 36, 24, 0.14);
 }
 
 .menu-card img {
-  height: 220px;
+  height: 240px;
   object-fit: cover;
 }
 
 .menu-card-body {
-  padding: 1.2rem;
+  padding: 1.6rem;
 }
 
 .menu-card h3 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.45rem;
+  font-size: 1.15rem;
+  color: var(--text);
 }
 
 .menu-card span {
   display: inline-block;
-  margin-top: 0.7rem;
+  margin-top: 0.85rem;
   font-weight: 700;
   color: var(--accent);
 }
@@ -283,56 +343,75 @@ a {
 .reserve-section {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: start;
   padding-bottom: 5rem;
 }
 
+.reserve-copy {
+  padding: 2rem;
+}
+
 .reserve-copy p:last-child {
   color: var(--muted);
+  max-width: 540px;
 }
 
 .reserve-form {
-  padding: 1.4rem;
+  padding: 2rem;
+  display: grid;
+  gap: 1.15rem;
+  max-width: 520px;
 }
 
 .reserve-form label {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-weight: 600;
+  color: var(--text);
 }
 
 .reserve-form input {
-  padding: 0.8rem 0.95rem;
+  padding: 0.95rem 1rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   font: inherit;
-  background: #fffdf9;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reserve-form input:focus {
+  outline: none;
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 0 4px rgba(184, 107, 61, 0.12);
 }
 
 .reserve-form button {
   width: 100%;
   border: none;
   border-radius: 999px;
-  padding: 0.95rem 1rem;
+  padding: 1rem 1.15rem;
   background: var(--accent);
   color: #fff;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 16px 30px rgba(184, 107, 61, 0.22);
 }
 
 .reserve-form button:hover {
   background: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 .footer {
   text-align: center;
-  padding: 1.4rem 1rem 2rem;
+  padding: 2.5rem 1rem;
   color: var(--muted);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes fadeUp {

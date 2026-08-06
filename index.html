@@ -8,6 +8,7 @@
       name="description"
       content="A modern restaurant website with a responsive layout, elegant menu, and reservation experience."
     />
+    <meta name="theme-color" content="#8b4622" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,21 +25,21 @@
           <a href="#about">About</a>
           <a href="#menu">Menu</a>
           <a href="#reserve">Reserve</a>
+          <a href="Request Reservation.html">Reservation</a>
         </div>
         <a class="nav-cta" href="#reserve">Book a Table</a>
       </nav>
 
       <div class="hero-content">
         <div class="hero-copy">
-          <p class="eyebrow">Fine dining • seasonal ingredients</p>
-          <h1>Fresh flavors, warm hospitality.</h1>
+          <p class="eyebrow">Elevated dining • impeccable service</p>
+          <h1>Where every meal feels exceptional.</h1>
           <p class="hero-text">
-            Discover a modern dining experience where chef-crafted dishes meet a cozy,
-            welcoming atmosphere.
+            A refined dining destination blending timeless cuisine with modern warmth.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#menu">Explore Menu</a>
-            <a class="btn btn-secondary" href="#reserve">Reserve Now</a>
+            <a class="btn btn-primary" href="#menu">View Menu</a>
+            <a class="btn btn-secondary" href="#reserve">Reserve a Table</a>
           </div>
           <div class="highlights">
             <div>
@@ -201,21 +202,21 @@
         </div>
 
         <form class="reserve-form">
-          <label>
+          <label for="reservation-name">
             <span>Name</span>
-            <input type="text" placeholder="Your name" />
+            <input id="reservation-name" name="name" type="text" placeholder="Your name" required />
           </label>
-          <label>
+          <label for="reservation-email">
             <span>Email</span>
-            <input type="email" placeholder="your@email.com" />
+            <input id="reservation-email" name="email" type="email" placeholder="you@example.com" required />
           </label>
-          <label>
+          <label for="reservation-date">
             <span>Date</span>
-            <input type="date" />
+            <input id="reservation-date" name="date" type="date" required />
           </label>
-          <label>
+          <label for="reservation-guests">
             <span>Guests</span>
-            <input type="number" min="1" max="10" value="2" />
+            <input id="reservation-guests" name="guests" type="number" min="1" max="10" value="2" required />
           </label>
           <button type="submit">Request Reservation</button>
         </form>
