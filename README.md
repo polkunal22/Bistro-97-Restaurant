@@ -1,46 +1,37 @@
-# Bistro 97 — Static Website
+﻿# Bistro 97 Restaurant Website
 
-Simple static website demo built with plain HTML and CSS. Includes a homepage, a reservation form page, and an image gallery.
+A professionally designed restaurant landing page showcasing a refined dining experience, menu highlights, and a reservation flow.
 
-**Preview**: Open [index.html](index.html) in your browser or run a local HTTP server.
+## Project Overview
 
-**Quick start**
+This repository contains a responsive restaurant website built with semantic HTML and clean CSS. The design focuses on elegant typography, premium imagery, and an inviting user experience suited for a modern dining brand.
 
-- Open directly in browser: double-click `index.html`.
-- Or serve locally (Python 3):
+## Key Features
 
-```bash
-python -m http.server 8000
-# then open http://localhost:8000
-```
+- Responsive layout for desktop, tablet, and mobile
+- Hero banner with a reservation call to action
+- Featured menu section with signature dishes
+- Reservation form and dedicated reservation page
+- Consistent branding using warm, upscale styling
 
-**Project structure**
+## Included Files
 
-- `index.html` — Homepage
-- `Request Reservation.html` — Reservation form page
-- `style.css` — Stylesheet
-- `img/` — Image assets used on the site
+- `index.html` — Main restaurant landing page with hero section, about section, menu highlights, and reservation call-to-action.
+- `Request Reservation.html` — Dedicated reservation page for booking inquiries.
+- `style.css` — Global styling, responsive grid layout, buttons, cards, and interactive states.
+- `img/` — Supporting imagery used for the website design.
 
-**Images**
+## How to Use
 
-- photo-1467003909585-2f8a72700288.avif
-- photo-1482049016688-2d3e1b311543.avif
-- photo-1504674900247-0877df9cc836.avif
-- photo-1517248135467-4c7edcad34c4 k1.avif
-- photo-1519708227418-c8fd9a32b7a2.avif
-- photo-1547592180-85f173990554.avif
-- photo-1559847844-5315695dadae.avif
-- photo-1565299624946-b28f40a0ae38.avif
+1. Open `index.html` in your browser to preview the landing page.
+2. Use `Request Reservation.html` for the reservation request flow.
+3. Customize the menu, pricing, and content to match your restaurant brand.
 
-**Notes**
+## Notes
 
-- This is a static, client-side project — no backend required.
-- Filenames with spaces may cause issues on some servers; consider renaming `photo-1517248135467-4c7edcad34c4 k1.avif` to remove spaces.
+- The project is static and does not include server-side reservation handling.
+- For a production deployment, host the files on a static site hosting provider or integrate with a backend form submission service.
 
-**License**
+## License
 
-This project is provided as-is. Add a license file if you intend to publish.
-
-**Contact**
-
-Maintainer: Local project files in this workspace.
+This project is provided as-is for demonstration and portfolio use.
