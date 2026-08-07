@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Bistro 22</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="thank-you-body">
+    <main class="thank-you-page">
+      <div class="thank-you-card">
+        <div class="thank-you-icon">✓</div>
+        <p class="eyebrow">Reservation Request Received</p>
+        <h1 id="thank-you-title">Thank you for booking with Bistro 22.</h1>
+        <p id="thank-you-message">
+          We have received your reservation request and will contact you shortly to confirm your table.
+        </p>
+        <a class="btn btn-primary" href="index.html">Visit Again</a>
+      </div>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name")?.trim();
+      const title = document.getElementById("thank-you-title");
+      const message = document.getElementById("thank-you-message");
+
+      if (name) {
+        title.textContent = `Thank you, ${name}!`;
+        message.textContent = "We have received your reservation request and will contact you shortly to confirm your table.";
+      }
+    </script>
+  </body>
+</html>

@@ -3,71 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bistro 97 | Request Reservation</title>
-    <meta
-      name="description"
-      content="Book your table at Bistro 97 with our reservation page."
-    />
-    <meta name="theme-color" content="#8b4622" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Reserve a Table | Bistro 22</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header class="hero-section">
-      <nav class="navbar">
-        <a class="brand" href="index.html">Bistro 97</a>
-        <div class="nav-links">
-          <a href="index.html#about">About</a>
-          <a href="index.html#menu">Menu</a>
-          <a href="index.html#reserve">Reserve</a>
-        </div>
-        <a class="nav-cta" href="index.html">Back Home</a>
-      </nav>
-
-      <div class="hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow">Reservation</p>
-          <h1>Reserve your table with confidence.</h1>
-          <p class="hero-text">
-            Plan your visit with ease and enjoy carefully curated service, premium seating,
-            and a memorable dining experience.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="index.html#menu">View Menu</a>
-            <a class="btn btn-secondary" href="index.html#reserve">Reserve Now</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
-            alt="A beautifully styled restaurant dining table"
-          />
-          <div class="hero-card-overlay">
-            <p>Designed for unforgettable evenings</p>
-            <h3>Request your reservation</h3>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="reserve-section">
-        <div class="reserve-copy">
-          <p class="eyebrow">Book Today</p>
-          <h2>Request your table in seconds.</h2>
-          <p>
-            Simply fill out the form and our team will confirm your reservation.
-            We look forward to welcoming you.
-          </p>
-        </div>
-
-        <form class="reserve-form">
+  <body class="thank-you-body">
+    <main class="thank-you-page">
+      <div class="thank-you-card">
+        <p class="eyebrow">Reservation Request</p>
+        <h1>Reserve your table</h1>
+        <p>Share your details and we will get back to you with confirmation.</p>
+        <form class="reserve-form" action="thankyou.html" method="get">
           <label for="reservation-name">
             <span>Name</span>
             <input id="reservation-name" name="name" type="text" placeholder="Your name" required />
@@ -86,11 +31,8 @@
           </label>
           <button type="submit">Request Reservation</button>
         </form>
-      </section>
+        <a class="btn btn-secondary" href="index.html">Back to Home</a>
+      </div>
     </main>
-
-    <footer class="footer">
-      <p>© 2026 Bistro 97. Crafted for unforgettable evenings.</p>
-    </footer>
   </body>
 </html>
