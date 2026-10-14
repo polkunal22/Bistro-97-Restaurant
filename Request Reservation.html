@@ -3,15 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reserve a Table | Bistro 22</title>
+    <meta name="theme-color" content="#f7f3ee" />
+    <meta name="description" content="Request a table at Bistro 22. Share your details and our team will confirm your reservation shortly." />
+    <title>Request a Reservation | Bistro 22</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="thank-you-body">
-    <main class="thank-you-page">
-      <div class="thank-you-card">
-        <p class="eyebrow">Reservation Request</p>
-        <h1>Reserve your table</h1>
-        <p>Share your details and we will get back to you with confirmation.</p>
+  <body class="thank-you-body reservation-body">
+    <main class="thank-you-page reservation-page">
+      <div class="thank-you-card reservation-card">
+        <a class="reservation-back" href="index.html" aria-label="Back to Bistro 22 home">← <span>Back to Bistro 22</span></a>
+        <header class="reservation-heading">
+          <p class="eyebrow">A table awaits</p>
+          <h1>Make a reservation</h1>
+          <p>Tell us a little about your visit. Our team will be in touch to confirm your table.</p>
+        </header>
         <form class="reserve-form" action="thankyou.html" method="get">
           <label for="reservation-name">
             <span>Name</span>
@@ -21,17 +26,17 @@
             <span>Email</span>
             <input id="reservation-email" name="email" type="email" placeholder="you@example.com" required />
           </label>
-          <label for="reservation-date">
+          <label class="reservation-date-field" for="reservation-date">
             <span>Date</span>
             <input id="reservation-date" name="date" type="date" required />
           </label>
-          <label for="reservation-guests">
+          <label class="reservation-guests-field" for="reservation-guests">
             <span>Guests</span>
             <input id="reservation-guests" name="guests" type="number" min="1" max="10" value="2" required />
           </label>
           <button type="submit">Request Reservation</button>
         </form>
-        <a class="btn btn-secondary" href="index.html">Back to Home</a>
+        <p class="reservation-note">Submitting a request does not guarantee a booking. We’ll confirm by email.</p>
       </div>
     </main>
   </body>
